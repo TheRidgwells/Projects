@@ -6,6 +6,13 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.2.3
+
+### Changed
+
+- **The footer is one row, as on services.stux.group**: the copyright on the left, the links in the middle, and the
+  family logo with "Created with… by Leo JD Ridgwell" on the right (it was a second, centred row).
+
 ## v0.2.2
 
 ### Added

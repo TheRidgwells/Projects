@@ -192,7 +192,10 @@ a { color: inherit; text-decoration: none; }
   --banner-site: var(--accent-bright);
   --banner-site-light: var(--accent-bright);
 }
-.site-footer .container.footer-brand { flex-direction: column; justify-content: center; margin-top: 18px; gap: 0; }
+/* the logo and credit sit at the right of the footer's one row, as on services.stux.group */
+.footer-brand { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.footer-brand .brand-footer, .footer-brand .made-with { margin-top: 0; font-size: inherit; }
+.footer-brand .made-with a { font-weight: 600; }
 .brand-footer { --text-muted: var(--text-muted); --accent: var(--accent-bright); }
 .copyright-glyph { vertical-align: -1px; }
 
