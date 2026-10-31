@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <!-- Discord: a custom link preview. -->
-  <script id="discord:component-embed" type="application/json">{"component":{"type":17,"accent_color":2780159,"components":[{"type":9,"components":[{"type":10,"content":"# [The Ridgwell Family Projects](https://projects.ridgwell.family/)\n**The Ridgwell Family's sites and projects, all in one place.**\n5 sites: personal pages, the cats' page and the status page that keeps an eye on them. No accounts, no ads, no tracking."}],"accessory":{"type":11,"media":{"url":"https://projects.ridgwell.family/assets/img/icon-512.png"}}},{"type":14},{"type":10,"content":"### Family sites\nThe Ridgwell Family · Leo JD Ridgwell · Elisia\n### Projects\nLily, Poppy, Olly & Dougal · Status"},{"type":1,"components":[{"type":2,"style":5,"label":"Browse projects","url":"https://projects.ridgwell.family/#projects"},{"type":2,"style":5,"label":"Family home","url":"https://the.ridgwell.family"}]}]}}</script>
+  <script id="discord:component-embed" type="application/json">{"component":{"type":17,"accent_color":2780159,"components":[{"type":9,"components":[{"type":10,"content":"# [The Ridgwell Family Projects](https://projects.ridgwell.family/)\n**The Ridgwell Family's sites and projects, all in one place.**\n6 sites: personal pages, the cats' page, the family archives and the status page that keeps an eye on them. No accounts, no ads, no tracking."}],"accessory":{"type":11,"media":{"url":"https://projects.ridgwell.family/assets/img/icon-512.png"}}},{"type":14},{"type":10,"content":"### Family sites\nThe Ridgwell Family · Leo JD Ridgwell · Elisia\n### Projects\nLily, Poppy, Olly & Dougal · The Ridgwell Archives · Status"},{"type":1,"components":[{"type":2,"style":5,"label":"Browse projects","url":"https://projects.ridgwell.family/#projects"},{"type":2,"style":5,"label":"Family home","url":"https://the.ridgwell.family"}]}]}}</script>
   <script>(function(){try{var t=localStorage.getItem("ridgwell-projects-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/site-banner.css">
@@ -49,7 +49,7 @@
       </div>
       <p class="season-note">Seasonal overlays by <a href="https://seasonaloverlayslibrary.stuxapis.net" target="_blank" rel="noopener">SeasonalOverlaysLibrary</a> from StuxAPIs.</p>
       <div class="hero-stats">
-        <div><strong class="grad">5</strong><span>sites</span></div>
+        <div><strong class="grad">6</strong><span>sites</span></div>
         <div><strong class="grad">0</strong><span>trackers</span></div>
         <div><strong class="grad">0</strong><span>accounts needed</span></div>
       </div>
@@ -145,7 +145,25 @@
           </div>
         </article>
 
-        <article data-state="soon" class="project-card">
+        <article class="project-card">
+          <div class="project-top">
+            <img class="project-icon" src="/assets/img/projects/archives.png" width="56" height="56" alt="The Ridgwell Archives icon" loading="lazy">
+            <div>
+              <h3>The Ridgwell Archives</h3>
+              <div class="project-tagline">Retired family sites, kept</div>
+            </div>
+          </div>
+          <p class="desc">An archive of the family&rsquo;s retired websites and projects: snapshots of sites that are no longer live, so they aren&rsquo;t lost just because they&rsquo;ve shut down.</p>
+          <div class="stack">
+            <span class="pill">PHP</span>
+            <span class="pill">Web archive</span>
+          </div>
+          <div class="project-links">
+            <a href="https://archives.ridgwell.network" target="_blank" rel="noopener">Website</a>
+          </div>
+        </article>
+
+        <article class="project-card">
           <div class="project-top">
             <img class="project-icon" src="/assets/img/projects/status.svg" width="56" height="56" alt="Status icon" loading="lazy">
             <div>

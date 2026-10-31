@@ -23,6 +23,7 @@
 | The Ridgwell Family | The Ridgwell Family's home page (under maintenance at the moment) | [the.ridgwell.family](https://the.ridgwell.family) | — |
 | Leo JD Ridgwell | Leo's personal site: a blog about his work, life and projects, with his experience, portfolio and CV | [leo.ridgwell.family](https://leo.ridgwell.family) | — |
 | Elisia | Elisia's site, still being built (a coming-soon page for now) | [elisia.ridgwell.family](https://elisia.ridgwell.family) | — |
+| The Ridgwell Archives | The family's retired websites and projects, archived | [archives.ridgwell.network](https://archives.ridgwell.network) | — (private) |
 | Lily, Poppy, Olly & Dougal | The Ridgwell cats, being cats: an animated page where the family's cats wander about, with Lily and Dougal remembered there too | [cats.ridgwell.family](https://cats.ridgwell.family) | — (private) |
 | Status | Live status of the family's websites | [status.ridgwell.family](https://status.ridgwell.family) | [TheRidgwells/Status](https://github.com/TheRidgwells/Status) |
 

@@ -6,6 +6,17 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.3.0
+
+### Added
+
+- **The Ridgwell Archives** (archives.ridgwell.network): the family's retired websites and projects, with the Ridgwell
+  Archives' own icon (the family logo on its navy square, as the LJDR Archives has). The hero counts 6 sites.
+
+### Fixed
+
+- The Status card no longer carries the "coming soon" state: status.ridgwell.family is live.
+
 ## v0.2.3
 
 ### Changed
