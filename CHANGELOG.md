@@ -6,6 +6,12 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.2.1
+
+### Changed
+
+- **Get in touch** points to Leo: the email is leo@ridgwell.family and the site button is leo.ridgwell.family.
+
 ## v0.2.0
 
 ### Added
