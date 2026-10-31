@@ -28,7 +28,7 @@ function pages(dir) {
 }
 
 // The only off-site thing a page may load: the family logo and icon.
-const OFFSITE_OK = /^https:\/\/global\.media\.ridgwell\.family\/(logo|icon)\.png$/;
+const OFFSITE_OK = /^https:\/\/(global\.media\.ridgwell\.family\/(logo|icon)\.png|seasonaloverlayslibrary\.stuxapis\.net\/seasonal-overlays-library\.js)$/;
 const ALLOWED = new Set([1, 2, 9, 10, 11, 12, 14, 17]);
 function walk(c, f) { f(c); (c.components || []).forEach(x => walk(x, f)); if (c.accessory) walk(c.accessory, f); }
 
@@ -151,7 +151,7 @@ check("main.js and changelogs.js fetch nothing off-site", () => {
     const js = read(f);
     const fetches = js.match(/fetch\(([^,)]+)/g) || [];
     fetches.forEach(c => assert(!/https?:/.test(c), f + ": " + c));
-    assert(!/raw\.githubusercontent|seasonaloverlays/i.test(js), f);
+    assert(!/raw\.githubusercontent/i.test(js), f);
   }
 });
 

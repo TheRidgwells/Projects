@@ -96,6 +96,38 @@
   }).catch(function () {});
 })();
 
+// Seasonal overlay button: SeasonalOverlaysLibrary (StuxAPIs) plays the overlay for today's
+// season. The button reads "Pumpkins?" until the overlay is running, then "Pumpkins!" while it
+// plays. The library is a deferred script, so wait for DOMContentLoaded before using it.
+document.addEventListener("DOMContentLoaded", function () {
+  var lib = window.SeasonalOverlaysLibrary;
+  var btn = document.getElementById("season-btn");
+  if (!lib || !btn) return;
+  var LABEL = {
+    fireworks: "\uD83C\uDF86 Fireworks", hearts: "\u2764\uFE0F Hearts", stpatricks: "\uD83C\uDF40 Shamrocks",
+    eastereggs: "\uD83E\uDD5A Easter eggs", rainbows: "\uD83C\uDF08 Pride rainbows", sunny: "\u2600\uFE0F Sunshine",
+    pumpkins: "\uD83C\uDF83 Pumpkins", skullsghosts: "\uD83D\uDC7B Spooky season", thanksgiving: "\uD83E\uDD83 Thanksgiving",
+    snow: "\u2744\uFE0F Snow", christmas: "\uD83C\uDF84 Christmas", nyeve: "\uD83C\uDF89 New Year's Eve",
+    leavesSpring: "\uD83C\uDF31 Spring leaves", leavesSummer: "\uD83C\uDF3F Summer leaves",
+    leavesAutumn: "\uD83C\uDF42 Autumn leaves", leavesWinter: "\uD83C\uDF3E Winter leaves"
+  };
+  var preset = lib.resolveAutoPreset(new Date());
+  if (!preset) return;
+  var baseLabel = LABEL[preset] || "\u2728 Today's overlay";
+  var setActive = function (on) { btn.textContent = baseLabel + (on ? "!" : "?"); };
+  var running = function () { return !!document.getElementById("seasonal-overlays-container"); };
+  setActive(false);
+  btn.hidden = false;
+  // The library has no "finished" event, so watch its container: it is added when an overlay
+  // starts and removed when it ends (or is stopped).
+  new MutationObserver(function () { setActive(running()); }).observe(document.body, { childList: true });
+  btn.addEventListener("click", function () {
+    setActive(true); // immediate, even if the overlay is suppressed
+    // Safety net: if nothing is running shortly after, drop back to "?" once the default duration has passed.
+    setTimeout(function () { if (!running()) setActive(false); }, 2600);
+  });
+});
+
 // Light/dark toggle in the header: flips the theme and remembers it in this browser (ridgwell-projects-theme).
 // The <head> script applies a remembered choice before paint; with none, the system theme applies.
 (function () {

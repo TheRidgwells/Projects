@@ -6,6 +6,16 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.2.0
+
+### Added
+
+- **The seasonal overlays**, as on projects.stuxie.dev: a "Today's overlay" button in the header area (for example
+  "👻 Spooky season" at Halloween) plays the season's overlay from
+  [SeasonalOverlaysLibrary](https://seasonaloverlayslibrary.stuxapis.net) by StuxAPIs, with a credit line under it.
+  The Privacy and Cookies pages say it loads from `seasonaloverlayslibrary.stuxapis.net`, and the tests allow that one
+  script.
+
 ## v0.1.0
 
 ### Added

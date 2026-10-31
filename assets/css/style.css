@@ -342,6 +342,10 @@ a { color: inherit; text-decoration: none; }
 }
 .btn-primary:hover { box-shadow: 0 10px 28px -6px rgba(var(--accent-pink-rgb), 0.6); }
 .btn-ghost { color: var(--text); background: var(--ghost-bg); }
+.btn-season { font-family: var(--font-display); cursor: pointer; }
+.btn-season[hidden] { display: none; }
+.hero .season-note { margin-top: 14px; font-size: 0.8rem; color: var(--text-faint); }
+.hero .season-note a { color: var(--accent-bright); }
 .btn-ghost:hover { background: var(--accent-soft); border-color: var(--accent); }
 
 /* Sections */
