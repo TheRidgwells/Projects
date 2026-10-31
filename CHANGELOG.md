@@ -6,6 +6,17 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.2.2
+
+### Added
+
+- **A Status link in every footer**, to status.ridgwell.family, as on services.stux.group.
+
+### Removed
+
+- The "A Ridgwell Family Project" line beside the footer logo: the logo and the "Created with…" credit stay, as on
+  services.stux.group.
+
 ## v0.2.1
 
 ### Changed

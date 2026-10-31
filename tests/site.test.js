@@ -61,7 +61,8 @@ for (const file of pages(ROOT)) {
     check(rel + ": footer brand line, credit, version link and legal link", () => {
       const footer = html.slice(html.indexOf('<footer class="site-footer">'), html.indexOf("</footer>"));
       assert(footer, "no footer");
-      assert(footer.includes('<a class="brand-footer-text" href="/">A Ridgwell Family Project</a>'), "brand line");
+      assert(!/A Ridgwell Family Project/.test(footer), "no project line under the logo (like services.stux.group)");
+      assert(footer.includes('<a href="https://status.ridgwell.family" target="_blank" rel="noopener">Status</a>'), "Status link");
       assert(footer.includes('src="https://global.media.ridgwell.family/logo.png"'), "family logo");
       assert(/by <a href="https:\/\/leo\.ridgwell\.family"[^>]*>Leo JD Ridgwell<\/a>/.test(footer), "credit");
       assert(footer.includes("The Ridgwell Family. All rights reserved."), "copyright");
