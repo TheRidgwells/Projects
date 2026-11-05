@@ -47,6 +47,13 @@ The projects list has two sections: **Family sites** (personal and family home p
 
 All six live under `legal/` (`privacy`, `terms`, `cookies`, `imprint`, `disclaimer`, `opt-out`), each its own folder with an `index.html`, linked from the "Boring Legal Stuff" hub at `legal/index.html`. Keep them in sync with what the site actually does: if analytics, a form, or another off-site request is ever added, the privacy and cookies pages need a real update.
 
+## Branches
+
+Work goes onto `test` (or a branch off it), never straight onto `main`. Changes reach `main` only through a pull
+request from `test`, which Leo reviews and merges with a merge commit, and merging is what publishes the site: GitHub
+Pages deploys on pushes to `main` (`.github/workflows/pages.yml`), never from `test`. CI runs on `test`, `main` and
+every pull request.
+
 ## Versioning
 
 This project is **pre-stable**, on [Semantic Versioning](https://semver.org) `0.x.y`. Its first stable release will be its first [Date Versioning](https://datevers.ing) release (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); there is no `1.0.0`, and once there is a Date Version there's no going back to `0.x.y`. Declaring the project stable is Leo's call.
@@ -58,6 +65,8 @@ To release:
 3. Update `README.md` if anything there changed.
 4. Run `bash tests/version.sh` and `node tests/site.test.js`.
 5. Run `./commit.sh` (or `commit.bat` on Windows). It checks the version (a `0.x.y` or a real, non-future Date Version; never `1.0.0`, and never `0.x.y` once a Date Version tag exists), commits and tags `v<version>`, and never pushes.
+6. On `test`: push `test`, then the tag on its own (`git push origin test`, then `git push origin v<version>`), and
+   open a pull request from `test` into `main`. The site changes when Leo merges it.
 
 ## Before committing
 

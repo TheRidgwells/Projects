@@ -6,6 +6,15 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.4.0
+
+### Added
+
+- **Ridgwell Social** (social.ridgwell.family): the family's own Fediverse server, GoToSocial with a Ridgwell Family
+  theme, with an **In development** badge until it's live. Its repository is private, so the card links the website
+  only. The hero counts 7 sites.
+- **An In development badge** (`data-state="development"`), with a code-brackets glyph, as on projects.stuxie.dev.
+
 ## v0.3.0
 
 ### Added
