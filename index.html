@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <!-- Discord: a custom link preview. -->
-  <script id="discord:component-embed" type="application/json">{"component":{"type":17,"accent_color":2780159,"components":[{"type":9,"components":[{"type":10,"content":"# [The Ridgwell Family Projects](https://projects.ridgwell.family/)\n**The Ridgwell Family's sites and projects, all in one place.**\n6 sites: personal pages, the cats' page, the family archives and the status page that keeps an eye on them. No accounts, no ads, no tracking."}],"accessory":{"type":11,"media":{"url":"https://projects.ridgwell.family/assets/img/icon-512.png"}}},{"type":14},{"type":10,"content":"### Family sites\nThe Ridgwell Family · Leo JD Ridgwell · Elisia\n### Projects\nLily, Poppy, Olly & Dougal · The Ridgwell Archives · Status"},{"type":1,"components":[{"type":2,"style":5,"label":"Browse projects","url":"https://projects.ridgwell.family/#projects"},{"type":2,"style":5,"label":"Family home","url":"https://the.ridgwell.family"}]}]}}</script>
+  <script id="discord:component-embed" type="application/json">{"component":{"type":17,"accent_color":2780159,"components":[{"type":9,"components":[{"type":10,"content":"# [The Ridgwell Family Projects](https://projects.ridgwell.family/)\n**The Ridgwell Family's sites and projects, all in one place.**\n8 sites: personal pages, the cats' page, the family's Fediverse server, the family archives, the status page that keeps an eye on them and this one. No accounts, no ads, no tracking."}],"accessory":{"type":11,"media":{"url":"https://projects.ridgwell.family/assets/img/icon-512.png"}}},{"type":14},{"type":10,"content":"### Family sites\nThe Ridgwell Family · Leo JD Ridgwell · Elisia\n### Projects\nLily, Poppy, Olly & Dougal · Ridgwell Social · The Ridgwell Archives · Status · The Ridgwell Family Projects"},{"type":1,"components":[{"type":2,"style":5,"label":"Browse projects","url":"https://projects.ridgwell.family/#projects"},{"type":2,"style":5,"label":"Family home","url":"https://the.ridgwell.family"}]}]}}</script>
   <script>(function(){try{var t=localStorage.getItem("ridgwell-projects-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/site-banner.css">
@@ -49,7 +49,7 @@
       </div>
       <p class="season-note">Seasonal overlays by <a href="https://seasonaloverlayslibrary.stuxapis.net" target="_blank" rel="noopener">SeasonalOverlaysLibrary</a> from StuxAPIs.</p>
       <div class="hero-stats">
-        <div><strong class="grad">7</strong><span>sites</span></div>
+        <div><strong class="grad">8</strong><span>sites</span></div>
         <div><strong class="grad">0</strong><span>trackers</span></div>
         <div><strong class="grad">0</strong><span>accounts needed</span></div>
       </div>
@@ -66,7 +66,7 @@
       <h3 class="subhead">Family sites</h3>
       <div class="project-grid">
 
-        <article data-state="maintenance" class="project-card featured">
+        <article data-state="soon" class="project-card featured">
           <div class="project-top">
             <img class="project-icon" src="/assets/img/projects/the-ridgwell-family.png" width="64" height="64" alt="The Ridgwell Family icon" loading="lazy">
             <div>
@@ -74,17 +74,18 @@
               <div class="project-tagline">the.ridgwell.family</div>
             </div>
           </div>
-          <span class="badge-status maintenance"><i class="badge-ico" aria-hidden="true"></i>Maintenance</span>
-          <p class="desc">The Ridgwell Family&rsquo;s home page, and the front door to everything else the family has online. It&rsquo;s down for maintenance at the moment.</p>
+          <span class="badge-status soon"><i class="badge-ico" aria-hidden="true"></i>Coming soon</span>
+          <p class="desc">The Ridgwell Family&rsquo;s home page, and the front door to everything else the family has online. It&rsquo;s being rebuilt: for now it&rsquo;s a coming-soon page, and it already answers for everyone&rsquo;s <strong>@ridgwell.family</strong> Fediverse handle.</p>
           <div class="stack">
             <span class="pill">Family home page</span>
+            <span class="pill">PHP</span>
           </div>
           <div class="project-links">
             <a href="https://the.ridgwell.family" target="_blank" rel="noopener">Website</a>
           </div>
         </article>
 
-        <article class="project-card featured">
+        <article data-state="soon" class="project-card featured">
           <div class="project-top">
             <img class="project-icon" src="/assets/img/projects/leo.png" width="64" height="64" alt="Leo JD Ridgwell icon" loading="lazy">
             <div>
@@ -92,14 +93,16 @@
               <div class="project-tagline">Creativity and possibilities with technology</div>
             </div>
           </div>
-          <p class="desc">Leo&rsquo;s personal site: a blog about his work, life and projects, with his experience, portfolio and CV.</p>
+          <span class="badge-status soon"><i class="badge-ico" aria-hidden="true"></i>Coming soon</span>
+          <p class="desc">Leo&rsquo;s personal site: his experience, portfolio, reports and CV. It&rsquo;s a complete rebuild, coming soon; the original WordPress site is kept at v1-leo.ridgwell.family.</p>
           <div class="stack">
-            <span class="pill">WordPress</span>
-            <span class="pill">Blog</span>
+            <span class="pill">PHP</span>
             <span class="pill">Portfolio</span>
+            <span class="pill">Reports</span>
           </div>
           <div class="project-links">
             <a href="https://leo.ridgwell.family" target="_blank" rel="noopener">Website</a>
+            <a href="https://v1-leo.ridgwell.family" target="_blank" rel="noopener">Original site</a>
           </div>
         </article>
 
@@ -147,7 +150,7 @@
 
         <article data-state="development" class="project-card">
           <div class="project-top">
-            <img class="project-icon" src="/assets/img/projects/the-ridgwell-family.png" width="56" height="56" alt="Ridgwell Social icon" loading="lazy">
+            <img class="project-icon" src="/assets/img/projects/ridgwell-social-icon.png" width="56" height="56" alt="Ridgwell Social icon" loading="lazy">
             <div>
               <h3>Ridgwell Social</h3>
               <div class="project-tagline">The family&rsquo;s own corner of the Fediverse</div>
@@ -184,7 +187,7 @@
 
         <article class="project-card">
           <div class="project-top">
-            <img class="project-icon" src="/assets/img/projects/status.svg" width="56" height="56" alt="Status icon" loading="lazy">
+            <img class="project-icon" src="/assets/img/projects/ridgwell-status-icon.png" width="56" height="56" alt="Status icon" loading="lazy">
             <div>
               <h3>Status</h3>
               <div class="project-tagline">Live status of the family&rsquo;s websites</div>
@@ -198,6 +201,25 @@
           <div class="project-links">
             <a href="https://status.ridgwell.family" target="_blank" rel="noopener">Website</a>
             <a href="https://github.com/TheRidgwells/Status" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <img class="project-icon" src="/assets/img/projects/ridgwell-projects-icon.png" width="56" height="56" alt="The Ridgwell Family Projects icon" loading="lazy">
+            <div>
+              <h3>The Ridgwell Family Projects</h3>
+              <div class="project-tagline">Every family site and project, in one place</div>
+            </div>
+          </div>
+          <p class="desc">This site: every one of the family&rsquo;s websites and projects on one page, with what each one is and where to find it.</p>
+          <div class="stack">
+            <span class="pill">HTML</span>
+            <span class="pill">GitHub Pages</span>
+          </div>
+          <div class="project-links">
+            <a href="https://projects.ridgwell.family" target="_blank" rel="noopener">Website</a>
+            <a href="https://github.com/TheRidgwells/Projects" target="_blank" rel="noopener">Repository</a>
           </div>
         </article>
 
