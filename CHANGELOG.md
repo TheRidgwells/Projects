@@ -6,6 +6,19 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.5.1
+
+### Changed
+
+- `scripts/badge-icons.py` takes `--size=512`, for Ridgwell Social's instance avatar.
+
+### Fixed
+
+- **The Ridgwell Family** card says **Coming soon**, not Maintenance: the.ridgwell.family is a coming-soon page
+  while it's rebuilt, and already answers for everyone's @ridgwell.family Fediverse handle.
+- **Leo JD Ridgwell**'s card describes the rebuilt site (PHP: experience, portfolio, reports and CV), marked
+  **Coming soon**, with a link to the original WordPress site at v1-leo.ridgwell.family.
+
 ## v0.5.0
 
 ### Added

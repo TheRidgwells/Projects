@@ -1,9 +1,13 @@
 """Builds The Ridgwell Family's project icons (from StuxieDev's badge style): the family emblem on a round avatar with a badge in the bottom-right corner.
-Usage: python -I scripts/badge-icons.py <family icon.png> <out dir> [social|projects|status ...]"""
+Usage: python -I scripts/badge-icons.py <family icon.png> <out dir> [social|projects|status ...] [--size=512]"""
 import math, sys
 from PIL import Image, ImageDraw, ImageFilter
 
 src, out = sys.argv[1], sys.argv[2]
+SIZE = 256                 # output size; --size=512 for an avatar
+for arg in list(sys.argv[3:]):
+    if arg.startswith("--size="):
+        SIZE = int(arg.split("=", 1)[1]); sys.argv.remove(arg)
 S = 4                      # supersampling
 N = 512 * S
 BG = (6, 16, 51, 255)       # #061033, the family sites' dark background
@@ -148,6 +152,6 @@ for key, name, draw in (("status", "ridgwell-status-icon.png", status),
         chain(layer)
     else:
         draw(layer)
-    icon = Image.alpha_composite(avatar, layer).resize((256, 256), Image.LANCZOS)
+    icon = Image.alpha_composite(avatar, layer).resize((SIZE, SIZE), Image.LANCZOS)
     icon.save(f"{out}/{name}", optimize=True)
     print(name)
