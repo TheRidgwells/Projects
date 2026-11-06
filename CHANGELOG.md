@@ -6,6 +6,12 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.5.2
+
+### Changed
+
+- The Status card is now called **Ridgwell Status**, like Ridgwell Social (and in the README's table).
+
 ## v0.5.1
 
 ### Changed
