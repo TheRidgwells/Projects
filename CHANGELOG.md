@@ -6,6 +6,15 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.5.3
+
+### Fixed
+
+- The README's project table lists The Ridgwell Family Projects itself, as the site's cards do, and its intro names
+  Ridgwell Social, the archives and Ridgwell Status.
+- `CONTRIBUTING.md` lists the `development` card state (Ridgwell Social's), no longer waits for status.ridgwell.family
+  to go live (it is), and points to `scripts/badge-icons.py` for new project icons.
+
 ## v0.5.2
 
 ### Changed

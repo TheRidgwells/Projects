@@ -38,8 +38,8 @@ The projects list has two sections: **Family sites** (personal and family home p
 
 1. Add/update the entry in the README's project table
 2. Add/update the matching `<article class="project-card">` block in `index.html`, and the count in the hero stats
-3. Drop a logo/icon into `assets/img/projects/` if the project doesn't already have a suitable square icon there (served from this site, not hot-linked)
-4. **One badge per card**, above the description, from the card's `data-state` (space-separated; the first that applies wins: `discontinued`, `template`, `maintenance`, `soon`). Render the matching badge in the HTML, e.g. `<span class="badge-status soon"><i class="badge-ico" aria-hidden="true"></i>Coming soon</span>`. Remove the state when it no longer applies (for example once the.ridgwell.family is back from maintenance, Elisia's site launches, or status.ridgwell.family goes live).
+3. Drop a logo/icon into `assets/img/projects/` if the project doesn't already have a suitable square icon there (served from this site, not hot-linked). The family's own projects use badge icons (the family emblem with a small badge), made by `scripts/badge-icons.py`
+4. **One badge per card**, above the description, from the card's `data-state` (space-separated; the first that applies wins: `discontinued`, `template`, `maintenance`, `development`, `soon`). Render the matching badge in the HTML, e.g. `<span class="badge-status soon"><i class="badge-ico" aria-hidden="true"></i>Coming soon</span>`. Remove the state when it no longer applies (for example once the.ridgwell.family or leo.ridgwell.family leaves coming soon mode, Elisia's site launches, or Ridgwell Social is out of development).
 5. **Only link a repository if it is public**: no "Repository" link on a card for a private or missing repo; write "— (private)" in the README table instead. Run `scripts/check-repo-links.sh` (needs `gh`) to list linked repos that are not public.
 6. **Only public sites.** Nothing from the family's private homelab is listed here.
 
