@@ -6,6 +6,24 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.5.0
+
+### Added
+
+- **New project icons** for Ridgwell Social, Status and this site, in the badge style projects.stuxie.dev uses: the
+  family emblem on a round navy avatar in a Ridgwell blue ring, with a badge in the corner. Ridgwell Social's badge
+  is the Fediverse mark, Status's a heartbeat line, and Projects' a `<•>`. `scripts/badge-icons.py` (Pillow) makes
+  them.
+- **The Ridgwell Family Projects** (this site) has its own card. The hero counts 8 sites.
+
+### Changed
+
+- The Discord embed lists Ridgwell Social and this site, and counts 8 sites.
+
+### Removed
+
+- The old Status icon (`status.svg`), replaced by the new one.
+
 ## v0.4.0
 
 ### Added
