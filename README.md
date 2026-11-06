@@ -6,7 +6,7 @@
 
 ### *The Ridgwell Family's sites and projects, all in one place: [projects.ridgwell.family](https://projects.ridgwell.family)*
 
-[The Ridgwell Family Projects](https://projects.ridgwell.family) is a small, static, no-build-step website that links out to the family's other sites: personal pages, the family cats' page, and the status page that keeps an eye on them all.
+[The Ridgwell Family Projects](https://projects.ridgwell.family) is a small, static, no-build-step website that links out to the family's other sites: personal pages, the family cats' page, Ridgwell Social, the archives, and Ridgwell Status, the status page that keeps an eye on them all.
 
 - Plain HTML, CSS, and JavaScript: no framework, no bundler, no dependencies to install
 - Deployed to [GitHub Pages](https://pages.github.com/) via `.github/workflows/pages.yml`
@@ -27,6 +27,7 @@
 | Lily, Poppy, Olly & Dougal | The Ridgwell cats, being cats: an animated page where the family's cats wander about, with Lily and Dougal remembered there too | [cats.ridgwell.family](https://cats.ridgwell.family) | — (private) |
 | Ridgwell Social | The family's own Fediverse server (GoToSocial, with a Ridgwell Family theme), still in development | [social.ridgwell.family](https://social.ridgwell.family) | — (private) |
 | Ridgwell Status | Live status of the family's websites | [status.ridgwell.family](https://status.ridgwell.family) | [TheRidgwells/Status](https://github.com/TheRidgwells/Status) |
+| The Ridgwell Family Projects | This site: every family site and project, in one place | [projects.ridgwell.family](https://projects.ridgwell.family) | [TheRidgwells/Projects](https://github.com/TheRidgwells/Projects) |
 
 This table (and the matching cards on the site) is the source of truth for what's listed: update both together when a site is added, retired, or renamed. Only public sites are listed; nothing from the family's private homelab.
 
