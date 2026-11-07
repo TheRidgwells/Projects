@@ -6,6 +6,13 @@ Fixed, Removed, Security, Deprecated. It uses [Date Versioning](https://datevers
 later releases the same day) since v26.11.07, its first stable release; v0.1.0 to v0.6.0 were pre-stable, on
 [Semantic Versioning](https://semver.org) `0.x.y`.
 
+## v26.11.07-2
+
+### Changed
+
+- **Leo JD Ridgwell is live.** leo.ridgwell.family has launched (its first stable release), so its card loses the
+  "Coming soon" badge and its description no longer says it's coming soon.
+
 ## v26.11.07-1
 
 ### Fixed
