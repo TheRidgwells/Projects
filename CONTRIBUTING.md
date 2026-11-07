@@ -57,7 +57,7 @@ every pull request.
 
 ## Versioning
 
-This project is **pre-stable**, on [Semantic Versioning](https://semver.org) `0.x.y`. Its first stable release will be its first [Date Versioning](https://datevers.ing) release (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); there is no `1.0.0`, and once there is a Date Version there's no going back to `0.x.y`. Declaring the project stable is Leo's call.
+This project is **stable** and uses [Date Versioning](https://datevers.ing): each release is its UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day, never in the future. Its first stable release was v26.11.07; before it, versions were pre-stable `0.x.y` ([Semantic Versioning](https://semver.org)). There is no `1.0.0`, and the commit scripts refuse to go back to `0.x.y`.
 
 To release:
 
