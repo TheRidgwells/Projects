@@ -156,6 +156,47 @@ check("main.js and changelogs.js fetch nothing off-site", () => {
   }
 });
 
+// The one live off-site request: the hero eyebrow's status, from Ridgwell Status's summary.json on GitHub
+// (CONTRIBUTING, Privacy and Cookies say so). Nothing else may be fetched from status-eyebrow.js.
+const STATUS_URL = "https://raw.githubusercontent.com/TheRidgwells/Status/main/data/summary.json";
+check("status-eyebrow.js fetches only Ridgwell Status's summary.json", () => {
+  const js = read("assets/js/status-eyebrow.js");
+  const urls = js.match(/https?:\/\/[^"'\s]+/g) || [];
+  urls.forEach(u => assert(u === STATUS_URL || /^https:\/\/status\.ridgwell\.family/.test(u), "off-site: " + u));
+  assert(urls.includes(STATUS_URL));
+});
+
+// The eyebrow shows only the status once it loads, and stays as it was if the fetch fails.
+function eyebrowRun(fetchImpl) {
+  const mk = (hidden) => ({ hidden, textContent: "" });
+  const label = mk(false), state = mk(true);
+  const cls = new Set();
+  const el = {
+    title: "",
+    getAttribute: () => "ridgwell:*",
+    querySelector: sel => (sel === ".eyebrow-state" ? state : sel === ".eyebrow-label" ? label : null),
+    classList: { add: c => cls.add(c), remove: (...c) => c.forEach(x => cls.delete(x)) },
+  };
+  vm.runInNewContext(read("assets/js/status-eyebrow.js"), {
+    window: { fetch: true }, fetch: fetchImpl,
+    document: { querySelectorAll: () => [el] },
+  });
+  return new Promise(r => setTimeout(r, 30)).then(() => ({ el, label, state, cls }));
+}
+const summary = (status) => () => Promise.resolve({ ok: true, json: () => Promise.resolve({ status, monitors: [] }) });
+Promise.all([
+  eyebrowRun(summary("up")).then(({ label, state, cls, el }) => {
+    assert(state.textContent === "All operational" && !state.hidden && label.hidden && cls.has("up"));
+    assert(el.title === "Live from status.ridgwell.family");
+  }),
+  eyebrowRun(summary("partial")).then(({ state, cls }) => assert(state.textContent === "Partial outage" && cls.has("degraded"))),
+  eyebrowRun(summary("down")).then(({ state, cls }) => assert(state.textContent === "Major outage" && cls.has("down"))),
+  eyebrowRun(() => Promise.reject(new Error("offline"))).then(({ label, state, cls }) => {
+    assert(!label.hidden && state.hidden && cls.size === 0, "a failed fetch leaves it plain");
+  }),
+]).then(() => { console.log("ok   - (async) status eyebrow: up, partial, down, and a failed fetch"); },
+  e => { console.log("FAIL - status eyebrow: " + e.message); process.exitCode = 1; });
+
 // The changelog renderer must accept SemVer and Date Version headings and keep the global section order.
 check("changelog renderer handles ## v0.x.y, ## vYY.MM.DD and -N headings, in section order", () => {
   const md = "# Changelog\n\n## v26.10.23-1\n\n### Deprecated\n\n- d\n\n### Fixed\n\n- f\n\n### Security\n\n- s\n\n### Added\n\n- a\n\n### Removed\n\n- r\n\n### Changed\n\n- c\n\n## v26.10.23\n\n### Changed\n\n- c\n\n## v0.1.0\n\n### Added\n\n- first\n";

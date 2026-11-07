@@ -42,8 +42,8 @@
   // One badge per card, above the description. data-state holds the card's
   // declared state(s); the first that applies wins (discontinued, template,
   // maintenance, development, soon). The HTML already renders it, so this only re-resolves
-  // a card with several states. There are no live status badges: those would
-  // mean a request to a third party (GitHub) on every visit.
+  // a card with several states. The cards have no live status badges (each would
+  // be a request to GitHub); the one live status is the hero eyebrow's, from status-eyebrow.js.
   var STATES = [
     ["discontinued", "archived", "Discontinued"], ["template", "template", "Template"],
     ["maintenance", "maintenance", "Maintenance"], ["development", "building", "In development"],
