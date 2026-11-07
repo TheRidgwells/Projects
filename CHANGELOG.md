@@ -6,6 +6,21 @@ Fixed, Removed, Security, Deprecated. This project is pre-stable, on [Semantic V
 `0.x.y`; its first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC release
 date), with no 1.0.0.
 
+## v0.6.0
+
+### Added
+
+- **The hero eyebrow is a live status badge.** Once Ridgwell Status loads, it reads only the status, "All operational",
+  "Degraded", "Partial outage" or "Major outage", in a status badge's colour with a dot that pulses when all is up
+  (not with reduced motion), and links to status.ridgwell.family. It keeps the eyebrow's size and shape, and stays the
+  plain "The Ridgwell Family" eyebrow if the status can't load. `assets/js/status-eyebrow.js`, tested in
+  `tests/site.test.js`.
+
+### Changed
+
+- **One live request:** the eyebrow's status, from Ridgwell Status's `summary.json` on GitHub, is the site's only live
+  off-site request. The Privacy and Cookies pages, CONTRIBUTING and the README say so.
+
 ## v0.5.3
 
 ### Fixed
