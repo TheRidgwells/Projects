@@ -27,8 +27,8 @@ function pages(dir) {
   return out;
 }
 
-// The only off-site thing a page may load: the family logo and icon.
-const OFFSITE_OK = /^https:\/\/(global\.media\.ridgwell\.family\/(logo|icon)\.png|seasonaloverlayslibrary\.stuxapis\.net\/seasonal-overlays-library\.js)$/;
+// The only off-site things a page may load: the family logo and icon, the seasonal overlays and the cat.
+const OFFSITE_OK = /^https:\/\/(global\.media\.ridgwell\.family\/(logo|icon)\.png|seasonaloverlayslibrary\.stuxapis\.net\/seasonal-overlays-library\.js|kat\.stuxie\.dev\/kat\.js\?v=[\w.-]+)$/;
 const ALLOWED = new Set([1, 2, 9, 10, 11, 12, 14, 17]);
 function walk(c, f) { f(c); (c.components || []).forEach(x => walk(x, f)); if (c.accessory) walk(c.accessory, f); }
 

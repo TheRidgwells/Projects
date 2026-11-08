@@ -6,6 +6,30 @@ Fixed, Removed, Security, Deprecated. It uses [Date Versioning](https://datevers
 later releases the same day) since v26.11.07, its first stable release; v0.1.0 to v0.6.0 were pre-stable, on
 [Semantic Versioning](https://semver.org) `0.x.y`.
 
+## v26.11.08-1
+
+### Fixed
+
+- **The cat gets kat.stuxie.dev's newest script,** so it says "Pat the cat" and remembers a bi cat pick from page to
+  page. The script's address now ends `?v=26.11.08`: the old `?v=` had been cached with the script from before those
+  fixes.
+
+## v26.11.08
+
+### Added
+
+- **The cat.** StuxieDev's kat from [kat.stuxie.dev](https://kat.stuxie.dev) follows your pointer on every page, as
+  Olly, called a cat, like on leo.ridgwell.family. The footer's new **Your cat** menu swaps him for Lily, Poppy,
+  Dougal or the bi cat, or turns him off; the choice is kept in your browser as `sdKat`. The privacy and cookies pages
+  list it, and the site test allows its script.
+
+## v26.11.07-2
+
+### Changed
+
+- **Leo JD Ridgwell is live.** leo.ridgwell.family has launched (its first stable release), so its card loses the
+  "Coming soon" badge and its description no longer says it's coming soon.
+
 ## v26.11.07-1
 
 ### Fixed

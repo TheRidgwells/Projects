@@ -11,7 +11,8 @@
 - Plain HTML, CSS, and JavaScript: no framework, no bundler, no dependencies to install
 - Deployed to [GitHub Pages](https://pages.github.com/) via `.github/workflows/pages.yml`
 - No accounts, no ads, no tracking scripts, no cookies
-- Fonts and scripts served from the site itself; the only off-site requests are the family logo and icon from `global.media.ridgwell.family`, the seasonal overlay script, and the hero eyebrow's live status from Ridgwell Status's `summary.json` on GitHub
+- **The cat:** StuxieDev's kat follows your pointer on every page (`<script src="https://kat.stuxie.dev/kat.js?v=…" data-kat="olly" data-name="cat" defer>` in each page's `<head>`), as Olly; the footer's **Your cat** menu (`data-kat-picker`) swaps him for Lily, Poppy, Dougal or the bi cat, or none, kept in `localStorage` as `sdKat`.
+- Fonts and scripts served from the site itself; the only off-site requests are the family logo and icon from `global.media.ridgwell.family`, the seasonal overlay script, the cat from `kat.stuxie.dev`, and the hero eyebrow's live status from Ridgwell Status's `summary.json` on GitHub
 - The hero eyebrow is a live status badge: it reads "All operational" (or Degraded, Partial outage, Major outage) in the matching colour, links to status.ridgwell.family, and stays a plain eyebrow if the status can't load
 - Dark and light themes, following your system preference, with a toggle in the header
 
