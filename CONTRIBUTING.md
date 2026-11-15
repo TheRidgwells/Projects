@@ -16,7 +16,7 @@ cd Projects
 ./dev-server.sh
 ```
 
-No install step: there's no `package.json`, no dependencies, nothing to build. `dev-server.js` is a single dependency-free Node script; the only requirement is having Node itself installed. Pass `--no-dev-mode` to test the site as it behaves in production (no dev banner).
+No install step: there's no `package.json`, no dependencies, nothing to build. `dev-server.js` is a single dependency-free Node script; the only requirement is having Node itself installed. Pass `--no-dev-mode` to test the site as it behaves in production (no dev banner), and `--lan` to try it on a phone or another device on the home network (it prints the addresses to open; usually the 192.168.x.x one).
 
 ## Project conventions
 
@@ -48,12 +48,14 @@ The projects list has two sections: **Family sites** (personal and family home p
 
 All six live under `legal/` (`privacy`, `terms`, `cookies`, `imprint`, `disclaimer`, `opt-out`), each its own folder with an `index.html`, linked from the "Boring Legal Stuff" hub at `legal/index.html`. Keep them in sync with what the site actually does: if analytics, a form, or another off-site request is ever added, the privacy and cookies pages need a real update.
 
-## Branches
+## Branches and going live
 
-Work goes onto `test` (or a branch off it), never straight onto `main`. Changes reach `main` only through a pull
-request from `test`, which Leo reviews and merges with a merge commit, and merging is what publishes the site: GitHub
-Pages deploys on pushes to `main` (`.github/workflows/pages.yml`), never from `test`. CI runs on `test`, `main` and
-every pull request.
+- **`main` is what's live.** Nothing is pushed to it directly: it only changes when a pull request from `staging` is merged, with a merge commit so the release tags stay in its history. Merging is what publishes the site: GitHub Pages deploys on pushes to `main` (`.github/workflows/pages.yml`), never from `test` or `staging`.
+- **`staging` is the last check before live.** It only changes when a pull request from `test` is merged. Nothing deploys from it: there's no staging copy of this site.
+- **Work happens on `test`**, or on a branch off it that's merged back into it. Releases are made there too: `commit.sh` / `commit.bat` refuse to run on `staging` or `main`.
+- **Going live:** push `test` with its tag (`git push origin test --tags`), open a pull request into staging (`gh pr create --base staging --head test`), check staging once it's merged, then open one from staging into main (`gh pr create --base main --head staging`). Leo merges both.
+- Before opening a pull request, merge the branch it goes into back into yours if it has moved.
+- CI runs on all three branches and on every pull request.
 
 ## Versioning
 
@@ -66,8 +68,8 @@ To release:
 3. Update `README.md` if anything there changed.
 4. Run `bash tests/version.sh` and `node tests/site.test.js`.
 5. Run `./commit.sh` (or `commit.bat` on Windows). It checks the version (a `0.x.y` or a real, non-future Date Version; never `1.0.0`, and never `0.x.y` once a Date Version tag exists), commits and tags `v<version>`, and never pushes.
-6. On `test`: push `test`, then the tag on its own (`git push origin test`, then `git push origin v<version>`), and
-   open a pull request from `test` into `main`. The site changes when Leo merges it.
+6. On `test`: push `test` with the tag (`git push origin test --tags`), then take it through staging to main with
+   pull requests (see Branches and going live). The site changes when Leo merges the one into `main`.
 
 ## Before committing
 

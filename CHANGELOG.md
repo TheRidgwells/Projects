@@ -6,6 +6,16 @@ Fixed, Removed, Security, Deprecated. It uses [Date Versioning](https://datevers
 later releases the same day) since v26.11.07, its first stable release; v0.1.0 to v0.6.0 were pre-stable, on
 [Semantic Versioning](https://semver.org) `0.x.y`.
 
+## v26.11.15-1
+
+### Changed
+- **Branches: `test` → `staging` → `main`.** Releases are still made on `test`, and now go live through two pull requests: `test` into `staging`, then `staging` into `main`. Nothing is pushed to `staging` or `main` directly. `commit.sh` / `commit.bat` refuse to run on `staging` or `main`, and print the push (`git push origin test --tags`) and both `gh pr create` commands. CONTRIBUTING.md describes it in "Branches and going live". There's no staging copy: nothing deploys from `staging`. CI runs on `staging` and on pull requests into it too.
+
+## v26.11.15
+
+### Added
+- **`--lan` for the dev server** (`dev-server.sh`/`.bat`/`dev-server.js`): it listens on every interface instead of only 127.0.0.1, so a phone or another device on the home network can open the site, and prints the addresses to open (usually the 192.168.x.x one).
+
 ## v26.11.08-1
 
 ### Fixed
