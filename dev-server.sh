@@ -1,8 +1,9 @@
 #!/bin/bash
 # The Ridgwell Family Projects - local dev server
-# Usage: ./dev-server.sh [port] [--no-dev-mode]
+# Usage: ./dev-server.sh [port] [--no-dev-mode] [--lan]
 #   port            default: 8080
 #   --no-dev-mode   don't force DEV_MODE on for this run (see dev-server.js)
+#   --lan           listen on all interfaces, for phones and other devices on your network
 set -e
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 exec node "$DIR/dev-server.js" "$@"

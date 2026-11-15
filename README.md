@@ -38,7 +38,10 @@ This table (and the matching cards on the site) is the source of truth for what'
 ```
 ./dev-server.sh          # http://127.0.0.1:8080, DEV_MODE forced on
 ./dev-server.sh 3000 --no-dev-mode
+./dev-server.sh --lan    # also open it from a phone or another device on the home network
 ```
+
+Add `--lan` to open it from a phone or another device on the home network: it listens on every interface instead of only 127.0.0.1, and prints the addresses to open (`http://<address>:<port>`; usually the 192.168.x.x one). Allow Node through the firewall if Windows asks.
 
 On Windows, use `dev-server.bat` instead. No `npm install` needed: the dev server is a single dependency-free Node script (`dev-server.js`); Node just needs to be installed. See [CONTRIBUTING.md](CONTRIBUTING.md) for more.
 

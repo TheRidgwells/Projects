@@ -6,8 +6,11 @@
 // forced on for local runs without ever touching (or risking a commit of)
 // the real, committed, always-`false` file in assets/js/dev-mode.js.
 //
-// Usage: node dev-server.js [port] [--no-dev-mode]
+// Usage: node dev-server.js [port] [--no-dev-mode] [--lan]
+//   --lan   listen on all interfaces so phones and other devices on your network can open it
+//           (prints the addresses to open); default is 127.0.0.1 only
 const http = require("http");
+const os = require("os");
 const fs = require("fs");
 const path = require("path");
 
@@ -15,14 +18,18 @@ const ROOT = __dirname;
 const args = process.argv.slice(2);
 let port = 8080;
 let devMode = true;
+let host = "127.0.0.1";
 
 for (const arg of args) {
   if (arg === "--no-dev-mode") {
     devMode = false;
+  } else if (arg === "--lan") {
+    host = "0.0.0.0";
   } else if (/^\d+$/.test(arg)) {
     port = parseInt(arg, 10);
   } else {
     console.error(`Unknown option: ${arg}`);
+    console.error("Usage: node dev-server.js [port] [--no-dev-mode] [--lan]");
     process.exit(1);
   }
 }
@@ -81,8 +88,18 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(found).pipe(res);
 });
 
-server.listen(port, "127.0.0.1", () => {
+server.listen(port, host, () => {
   console.log(`The Ridgwell Family Projects running at http://127.0.0.1:${port}`);
+  if (host === "0.0.0.0") {
+    // This machine's IPv4 addresses, minus loopback
+    console.log("On your local network (--lan), open one of these on the other device:");
+    for (const nets of Object.values(os.networkInterfaces())) {
+      for (const net of nets || []) {
+        if ((net.family === "IPv4" || net.family === 4) && !net.internal) console.log(`    http://${net.address}:${port}`);
+      }
+    }
+    console.log("  (usually the 192.168.x.x one; allow Node through the firewall if asked)");
+  }
   if (devMode) {
     console.log("DEV_MODE forced on for this run (banner shows) — pass --no-dev-mode to disable.");
   } else {
