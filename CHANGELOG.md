@@ -6,6 +6,11 @@ Fixed, Removed, Security, Deprecated. It uses [Date Versioning](https://datevers
 later releases the same day) since v26.11.07, its first stable release; v0.1.0 to v0.6.0 were pre-stable, on
 [Semantic Versioning](https://semver.org) `0.x.y`.
 
+## v26.11.21
+
+### Changed
+- **Ridgwell Social is live** (social.ridgwell.family): its card loses the "In development" badge, and its description says it has the Ridgwell blue theme (it was going to be the cats' page's cream and terracotta) and a front page listing the family's accounts.
+
 ## v26.11.15-1
 
 ### Changed
