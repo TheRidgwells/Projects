@@ -27,7 +27,7 @@
 | Elisia | Elisia's site, still being built (a coming-soon page for now) | [elisia.ridgwell.family](https://elisia.ridgwell.family) | — |
 | The Ridgwell Archives | The family's retired websites and projects, archived | [archives.ridgwell.network](https://archives.ridgwell.network) | — (private) |
 | Lily, Poppy, Olly & Dougal | The Ridgwell cats, being cats: an animated page where the family's cats wander about, with Lily and Dougal remembered there too | [cats.ridgwell.family](https://cats.ridgwell.family) | — (private) |
-| Ridgwell Social | The family's own Fediverse server (GoToSocial, with a Ridgwell Family theme), still in development | [social.ridgwell.family](https://social.ridgwell.family) | — (private) |
+| Ridgwell Social | The family's own Fediverse server (GoToSocial, with a Ridgwell blue theme) | [social.ridgwell.family](https://social.ridgwell.family) | — (private) |
 | Ridgwell Status | Live status of the family's websites | [status.ridgwell.family](https://status.ridgwell.family) | [TheRidgwells/Status](https://github.com/TheRidgwells/Status) |
 | The Ridgwell Family Projects | This site: every family site and project, in one place | [projects.ridgwell.family](https://projects.ridgwell.family) | [TheRidgwells/Projects](https://github.com/TheRidgwells/Projects) |
 
