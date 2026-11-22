@@ -30,6 +30,7 @@
 | Ridgwell Social | The family's own Fediverse server (GoToSocial, with a Ridgwell blue theme) | [social.ridgwell.family](https://social.ridgwell.family) | — (private) |
 | Ridgwell Status | Live status of the family's websites | [status.ridgwell.family](https://status.ridgwell.family) | [TheRidgwells/Status](https://github.com/TheRidgwells/Status) |
 | The Ridgwell Family Projects | This site: every family site and project, in one place | [projects.ridgwell.family](https://projects.ridgwell.family) | [TheRidgwells/Projects](https://github.com/TheRidgwells/Projects) |
+| Leo JD Ridgwell v1 (discontinued) | The original WordPress leo.ridgwell.family (2020–2026), replaced by the rebuild and kept as it was | [v1-leo.ridgwell.family](https://v1-leo.ridgwell.family) | — |
 
 This table (and the matching cards on the site) is the source of truth for what's listed: update both together when a site is added, retired, or renamed. Only public sites are listed; nothing from the family's private homelab.
 
