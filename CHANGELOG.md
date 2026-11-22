@@ -6,6 +6,16 @@ Fixed, Removed, Security, Deprecated. It uses [Date Versioning](https://datevers
 later releases the same day) since v26.11.07, its first stable release; v0.1.0 to v0.6.0 were pre-stable, on
 [Semantic Versioning](https://semver.org) `0.x.y`.
 
+## v26.11.22-1
+
+### Fixed
+- **The changelog's v26.11.21 heading is back**: adding v26.11.22 above it had removed it, so Ridgwell Social's entry read as part of v26.11.22.
+
+## v26.11.22
+
+### Added
+- **A Discontinued section, with Leo JD Ridgwell v1** (Leo): the original WordPress leo.ridgwell.family (v1-leo.ridgwell.family, 2020–2026), replaced by the rebuild. It uses the dimmed, dashed "Discontinued" card the stylesheet already had, as on StuxieDev Projects.
+
 ## v26.11.21
 
 ### Changed
